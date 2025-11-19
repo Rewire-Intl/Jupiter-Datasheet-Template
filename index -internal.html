@@ -1,11 +1,10 @@
+<!-- Clean A4 One-Page HTML (No Margins, Table-Only Layout) -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jupiter Datasheet</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <style>
     @font-face {
       font-family: "Dubai";
@@ -37,277 +36,210 @@
       font-weight: 500;
     }
 
-    /* A4 Page in Browser */
-    html,
-    body {
-      /* height: 100%; */
-      /* margin: 0; */
-    }
-
-    td {
-      padding: 0px;
-    }
-
-    .dataCell {
-      line-height: 13px;
-      font-size: 12px;
-      border: 1px solid #ccc;
-      padding-left: 5px;
-      padding-right: 5px;
-      padding-top: 4px;
-      padding-bottom: 4px;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #eee;
-      font-family: "Dubai", sans-serif;
-      min-width: 210mm;
-      min-height: 297mm;
-      /* light grey background so white A4 stands out */
-    }
-
-    /* A4 Datasheet Container */
-    .datasheet {
-      width: 210mm;
-      /* 210mm */
-      height: 297mm;
-      /* 297mm */
-      background: #fff;
-      /* padding: 0 57px; */
-      /* 15mm */
-      font-size: 11px;
-      /* 8pt */
-      color: #1f1f1f;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Print Settings */
     @page {
       size: A4;
-      margin: 0 !important;
-      padding: 0 !important;
-
+      margin: 0;
     }
 
-    @media print {
-      body {
-        display: block !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Dubai";
+    }
 
-      .page {
-        padding: 0 !important;
-        margin: 0 !important;
-      }
+    body {
+      background: #eee;
+    }
 
+    /* A4 wrapper with zero margins */
+    .a4-page {
+      width: 210mm;
+      height: 297mm;
+      background: #fff;
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    .icon {
+      border: 1px solid #ccc;
+      width: 24px;
+      height: 24px;
+      margin-bottom: 5px;
+      background: #fff;
+      margin-bottom: 5px;
+      object-fit: cover;
+    }
+
+
+    td {
+      padding: 0;
+    }
+
+    .dataTable {
+      table-layout: fixed;
+    }
+
+    .dataTable tr:nth-child(even) {
+      background-color: #f2f2f2;
+      /* Light gray for even rows */
+    }
+
+
+
+    .dataCell {
+      border: 1px solid #ccc;
+      font-size: 12px;
+      padding: 4px 5px;
+      line-height: 13px;
     }
   </style>
 </head>
 
 <body>
-  <div style="background-color: white; width: 210mm; min-height: 297mm; height: auto; padding: 17.5px 0px;">
-    <!-- Header -->
-    <div>
 
-      <table style="height: 30px; 
-      width: 100%; border-collapse: collapse; background-color: #0069AF;">
-        <tr style="height: 30px;">
-          <th style="
-            color: #eee; 
-            text-align: start;
-            height: 30px; 
-            padding-left: 35px;">
-            <span style="font-weight: 700;font-size: 18px;">ENGIX PRO</span>
-            <span style="font-weight: 300;font-size: 18px;">Series</span>
-          </th>
-          <th style="text-align: end;color: #eee;
-          height: 30px;
-             padding-right: 30px; font-weight: 300; font-size: 18px;">ROUND TRIM CONE ADJUSTABLE</th>
-        </tr>
-      </table>
-      <!-- </header> -->
+  <div class="a4-page">
 
-      <div style="height: 17.5px; "></div>
-      <table
-        style="border-collapse: collapse; border: 1px solid #ccc; height: 280px; margin: 0px 35px; border-spacing: 0px;  padding: 0px 35px; box-sizing: border-box;">
-        <tr>
-          <td style="border-spacing: 0px; padding: 0px; width: 380px">
-            <table style="border-collapse: collapse;  border-spacing: 0px; width: 100%; padding: 0px;">
-              <tr style="padding: 0px;">
-                <td style="place-content: start; width: 100%; height: 280px;">
-                  <img src="/images/product_images/downlight.jpg" style="object-fit:contain; width: 100%;" alt="">
-                </td>
-                <td style="height: 100%; place-content: start;
-                  align-items: start  ; 
-                  align-content: start;
-                  border-left: 1px solid #ccc;
-                  border-right: 1px solid #ccc;
-                  border-spacing: 0px;
-                  border-collapse: collapse;
-                  padding: 5px;">
-                  <div style="font-size: 0px;">
-                    <img src="images/icons/CE.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc;">
-                    </img>
-                    <img src="images/icons/CE.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc; border-radius: 50">
-                    </img>
-                    <img src="images/icons/CEILING-ADJUTABLE.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc; border-radius: 50">
-                    </img>
-                    <img src="images/icons/CLASS-III.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc; border-radius: 50">
-                    </img>
-                    <img src="images/icons/CUT.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc; border-radius: 50">
-                    </img>
-                    <img src="images/icons/ETL.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc; border-radius: 50">
-                    </img>
-                    <img src="images/icons/FC.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc; border-radius: 50">
-                    </img>
-                    <img src="images/icons/ON-OFF.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc; border-radius: 50">
-                    </img>
-                    <img src="images/icons/ROHS.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc; border-radius: 50">
-                    </img>
-                    <img src="images/icons/TILT.png" alt="CE"
-                      style="margin-bottom: 5px; object-fit:cover; width: 24px; height: 24px; background-color: white; border: 1px solid #ccc; border-radius: 50">
-                    </img>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </td>
-          <td style="place-content: start; ">
-            <div style="padding: 5px;">
-              <p style="font-weight: 600;font-size: 14px; padding: 0px; margin: 0px; color: #0069AF;">
-                PRODUCT DESCRIPTION
-              </p>
-              <p
-                style="font-weight: 300; color: #1f1f1f; font-size: 12px; padding: 0px; margin: 0px;line-height: 16px;">
-                The ENGIX Round Cone Trim Adjustable Downlight family is a premium range of architectural luminaires
-                designed for precise, high-quality illumination. With wattages from 6W to 41W and outputs up to 3700
-                lumens, the series delivers exceptional flexibility across commercial, retail, and residential
-                environments. Engineered with adjustable cone trims for directional lighting, the RD series offers
-                multiple beam angles (9°–50°) and color temperature options (2700K–6000K) to suit a wide range of
-                lighting
-                applications.
-                <br>
-                <br>
-                Available in white or black finishes, these fixtures feature ON/OFF, 0–10V, and DALI dimming
-                compatibility
-                for seamless integration with modern lighting control systems. Rated IP20 or IP65 depending on the
-                model,
-                the ENGIX RD downlights combine refined aesthetics, superior performance, and installation
-                versatility—making them ideal for both ambient and accent lighting solutions.
-              </p>
-            </div>
-          </td>
-        </tr>
+    <!-- FULL PAGE TABLE STRUCTURE -->
+    <table style="width:100%; height:100%; border-collapse:collapse;">
+      <tr>
+        <td>
 
-      </table>
-      <!-- Product Section -->
-      <div style="padding: 0px 35px; border-collapse: collapse; 
-      border-spacing: 0px;   ">
-        <table style="border-collapse: collapse;width: 100%; 
-          border: 1px solid #ccc; border-top:0px solid;
-          border-spacing: 0px;
-          height: 100%;
-          padding: 0px 35px; box-sizing: border-box;">
-          <tr>
-            <td style="
-            border-spacing: 0px; 
-            padding: 0px;
-            width: 379.3px;
-            place-content: start;
-            border-collapse: collapse;
-            border-right: 1px solid#ccc;">
-              <div style="place-content: start;">
-                <div style="width: 100%; text-align: center; width: 100%; justify-content: center;">
-                  <img src="/images/diagrams/Diagram-01.png" style="object-fit:contain; margin:auto ; 
-                    height: 180px; margin:auto" alt="">
-                </div>
-                <div style="
-              padding: 5px; 
-              border-bottom: 1px solid #ccc;
-              border-top: 1px solid #ccc;">
-                  <p style="font-weight: 600;font-size: 14px; padding: 0px; margin: 0px; color: #0069AF;">
-                    PHOTOMETRIC DIAGRAM
-                  </p>
-                  <img src="/images/photometric/photometric-01.png" style="object-fit:contain; width: 100%; 
-                    height: 200px " alt="">
-                </div>
-                <div style="
-              padding: 5px; ">
-                  <p style="font-weight: 600;font-size: 14px; padding: 0px; margin: 0px; color: #0069AF;">
-                    ACCESSORIES
-                  </p>
-                  <div style="font-size: 14px; padding: 0px;
-                  line-height: 12px; margin: 0px; width: 100%;">
-                    <table>
-                      <tr style="height: 80px;">
-                        <td style="width: 80px; align-items: start; place-content: start;">
-                          <img style="border: 1px solid #ccc;
-                            width: 90px; height: 90px; object-fit: contain;"
-                            src="/images/accessories/Accessories-01.png" alt="">
-                          <p style=" font-size: 10px;line-height: 10px; margin: 4px 0px;">Non Dimmable LED Driver</p>
-                          <p
-                            style="background-color: #eee;margin: 4px 0px; width: fit-content; padding: 4px; font-size: 9px;line-height: 9px;">
-                            850001</p>
-                        </td>
-                        <td style="width: 80px; align-items: start;place-content: start;">
-                          <img style="border: 1px solid #ccc;
-                            width: 90px; height: 90px; object-fit: contain;"
-                            src="/images/accessories/Accessories-02.png" alt="">
-                          <p style=" font-size: 10px;line-height: 10px; margin: 4px 0px;">Non Dimmable LED Driver</p>
-                          <p
-                            style="background-color: #eee; margin: 4px 0px; width: fit-content; padding: 4px; font-size: 9px;line-height: 9px;">
-                            850001</p>
-                        </td>
-                        <td style="width: 80px; align-items: start; place-content: start;">
-                          <img style="border: 1px solid #ccc;
-                            width: 90px; height: 90px; object-fit: contain;"
-                            src="/images/accessories/Accessories-03.png" alt="">
-                          <p style=" font-size: 10px;line-height: 10px; margin: 4px 0px;">Non Dimmable LED Driver</p>
-                          <p
-                            style="background-color: #eee;margin: 4px 0px; width: fit-content; padding: 4px; font-size: 9px;line-height: 9px;">
-                            850001</p>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td style="place-content: start; width: auto; ">
-              <div style="background-color: #eee;
-              padding: 5px; border-bottom: 1px solid #ccc;">
-                <p style="font-weight: 600;font-size: 14px; padding: 0px; margin: 0px; color: #0069AF;">
-                  ITEM CODE
+          <!-- HEADER -->
+          <table style="width:100%; height:30px; background:#0069AF;">
+            <tr>
+              <td style="color:#eee; font-size:18px; font-weight:700; padding-left:35px;">ENGIX PRO <span
+                  style="font-weight:300;">Series</span></td>
+              <td style="color:#eee; font-size:18px; font-weight:300; text-align:right; padding-right:30px;">ROUND TRIM
+                CONE ADJUSTABLE</td>
+            </tr>
+          </table>
+
+          <!-- SPACER -->
+          <div style="height:17px;"></div>
+
+          <!-- PRODUCT IMAGE + DESCRIPTION TABLE -->
+          <table style="width: calc(100% - 70px); margin: auto; border:1px solid #ccc; height:280px;">
+            <tr>
+
+              <!-- LEFT COL: IMAGE + ICONS -->
+              <td style="width:380px; border-right:1px solid #ccc;">
+                <table style="width:100%; height:100%;">
+                  <tr>
+                    <td style="width:100%; height:100%;">
+                      <img src="/images/product_images/downlight.jpg"
+                        style="width:100%; height:100%; object-fit:contain;" />
+                    </td>
+                    <td style="width:35px; border-left:1px solid #ccc; padding:5px; place-content: start;">
+                      <div style="font-size:0; place-content: start;">
+                        <img src="images/icons/CE.png" class="icon" />
+                        <img src="images/icons/CE.png" class="icon" />
+                        <img src="images/icons/CEILING-ADJUTABLE.png" class="icon" />
+                        <img src="images/icons/CLASS-III.png" class="icon" />
+                        <img src="images/icons/CUT.png" class="icon" />
+                        <img src="images/icons/ETL.png" class="icon" />
+                        <img src="images/icons/FC.png" class="icon" />
+                        <img src="images/icons/ON-OFF.png" class="icon" />
+                        <img src="images/icons/ROHS.png" class="icon" />
+                        <img src="images/icons/TILT.png" class="icon" />
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+
+              <!-- RIGHT COL: DESCRIPTION -->
+              <td style="padding:5px; vertical-align:top;">
+                <p style="font-size:14px; font-weight:600; color:#0069AF; margin:0;">PRODUCT DESCRIPTION</p>
+                <p style="font-size:12px; font-weight:300; line-height:16px; margin:0;">
+                  The ENGIX Round Cone Trim Adjustable Downlight family is a premium range of architectural luminaires
+                  designed for precise, high-quality illumination. With wattages from 6W to 41W and outputs up to 3700
+                  lumens, the series delivers exceptional flexibility across commercial, retail, and residential
+                  environments. Engineered with adjustable cone trims for directional lighting, the RD series offers
+                  multiple beam angles (9°–50°) and color temperature options (2700K–6000K) to suit a wide range of
+                  lighting applications. <br><br>
+
+                  Available in white or black finishes, these fixtures feature ON/OFF, 0–10V, and DALI dimming
+                  compatibility for seamless integration with modern lighting control systems. Rated IP20 or IP65
+                  depending on the model, the ENGIX RD downlights combine refined aesthetics, superior performance, and
+                  installation versatility—making them ideal for both ambient and accent lighting solutions.
                 </p>
-                <div style="font-size: 18px; font-family: Geist Mono; padding: 0px; margin: 0px; width: 100%;">
-                  DPA10099270406601
+              </td>
+
+            </tr>
+          </table>
+
+          <!-- TECH SECTION MAIN SPLIT -->
+          <table
+            style="width: calc(100% - 70px); margin: auto; border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #ccc;">
+            <tr>
+
+              <!-- LEFT SIDE: DIAGRAM + ACCESSORIES -->
+              <td style="width:380px; border-right:1px solid #ccc; vertical-align:top;">
+
+                <div style="text-align:center; padding-top:10px;">
+                  <img src="/images/diagrams/Diagram-01.png" style="height:180px; object-fit:contain;" />
                 </div>
-              </div>
-              <div style="
-              padding: 5px; border-bottom: 1px solid #ccc;">
-                <p style="font-weight: 600;font-size: 14px; padding: 0px; margin: 0px; color: #0069AF;">
-                  TECHNICAL SPECIFICATIONS
-                </p>
-                <div style="width: 100%;">
-                  <table
-                    style="table-layout: fixed; font-size: 12px; border-collapse: collapse;border: 1px solid #ccc; width: 100%;">
-                    <tr style="background-color: #eee;">
+
+                <div style="padding:5px; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
+                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">PHOTOMETRIC DIAGRAM</p>
+                  <img src="/images/photometric/photometric-01.png"
+                    style="width:100%; height:150px; object-fit:contain;" />
+                </div>
+
+                <!-- ACCESSORIES -->
+                <div style="padding:5px;">
+                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">ACCESSORIES</p>
+                  <table style="">
+                    <tr>
+                      <td style="width:70px;padding-right: 5px;">
+                        <img src="/images/accessories/Accessories-01.png"
+                          style="width:70px; height:70px; line-height: 0px;vertical-align: top; border:1px solid #ccc; object-fit:contain;" />
+                        <p style="font-size:10px; margin:4px 0; line-height:10px;">Non Dimmable LED Driver
+                        </p>
+                        <p style="font-size:9px; background:#eee; width:fit-content; padding:4px; margin:4px 0;">850001
+                        </p>
+                      </td>
+                      <td style="width:70px;padding-right: 5px;">
+                        <img src="/images/accessories/Accessories-02.png"
+                          style="width:70px; height:70px; border:1px solid #ccc;vertical-align: top; object-fit:contain;" />
+                        <p style="font-size:10px; margin:4px 0; line-height:10px;width: 100%;">Non Dimmable LED Driver
+                        </p>
+                        <p style="font-size:9px; background:#eee; width:fit-content; padding:4px; margin:4px 0;">850001
+                        </p>
+                      </td>
+                      <td style="width:70px;padding-right: 5px;">
+                        <img src="/images/accessories/Accessories-03.png"
+                          style="width:70px; height:70px; border:1px solid #ccc; object-fit:contain;vertical-align: top;" />
+                        <p style="font-size:10px; margin:4px 0; line-height:10px;width: 100%;">Non Dimmable LED Driver
+                        </p>
+                        <p style="font-size:9px; background:#eee; width:fit-content; padding:4px; margin:4px 0;">850001
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+              </td>
+
+              <!-- RIGHT SIDE: ITEM CODE + TECH + MATERIAL -->
+              <td style="vertical-align:top;">
+
+                <div style="background:#eee; padding:5px; border-bottom:1px solid #ccc;">
+                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">ITEM CODE</p>
+                  <div style="font-size:18px; font-family:monospace;">DPA10099270406601</div>
+                </div>
+
+                <!-- TECHNICAL SPEC -->
+                <div style="padding:5px; border-bottom:1px solid #ccc;">
+                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">TECHNICAL SPECIFICATIONS</p>
+                  <table class="dataTable" style="width:100%; border:1px solid #ccc;">
+                    <tr>
                       <td class="dataCell">Light Source</td>
                       <td class="dataCell">CITIZEN LED</td>
                     </tr>
@@ -315,7 +247,7 @@
                       <td class="dataCell">LED Quantity</td>
                       <td class="dataCell">1</td>
                     </tr>
-                    <tr style="background-color: #eee;">
+                    <tr>
                       <td class="dataCell">Wattage</td>
                       <td class="dataCell">33W</td>
                     </tr>
@@ -323,7 +255,7 @@
                       <td class="dataCell">Input Current/Voltage</td>
                       <td class="dataCell">900mA / 36V</td>
                     </tr>
-                    <tr style="background-color: #eee;">
+                    <tr>
                       <td class="dataCell">Chip Lumen</td>
                       <td class="dataCell">3960 lm</td>
                     </tr>
@@ -331,7 +263,7 @@
                       <td class="dataCell">Delivered Lumen</td>
                       <td class="dataCell">3816 lm</td>
                     </tr>
-                    <tr style="background-color: #eee;">
+                    <tr>
                       <td class="dataCell">Efficacy</td>
                       <td class="dataCell">116 lm/W</td>
                     </tr>
@@ -339,7 +271,7 @@
                       <td class="dataCell">CRI</td>
                       <td class="dataCell">90</td>
                     </tr>
-                    <tr style="background-color: #eee;">
+                    <tr>
                       <td class="dataCell">Color Temperature</td>
                       <td class="dataCell">2700K</td>
                     </tr>
@@ -347,15 +279,15 @@
                       <td class="dataCell">Beam Angle</td>
                       <td class="dataCell">Wallwash</td>
                     </tr>
-                    <tr style="background-color: #eee;">
+                    <tr>
                       <td class="dataCell">Life Span</td>
                       <td class="dataCell">L80 50000Hrs</td>
                     </tr>
                     <tr>
                       <td class="dataCell">Ambient Temperature</td>
-                      <td class="dataCell">25° C ~ 50° C</td>
+                      <td class="dataCell">25°C ~ 50°C</td>
                     </tr>
-                    <tr style="background-color: #eee;">
+                    <tr>
                       <td class="dataCell">MacAdam</td>
                       <td class="dataCell">SDCM 3</td>
                     </tr>
@@ -365,28 +297,20 @@
                     </tr>
                   </table>
                 </div>
-              </div>
-              <div style="font-size: 14px; 
-              padding: 5px;">
-                <p style="padding: 0px; margin: 0px; color: #0069AF;">
-                  MATERIAL SPECIFICATIONS
-                </p>
-                <div style="width: 100%;">
-                  <table style=" table-layout: fixed;font-size: 12px;
-                    border-collapse: collapse;border: 1px solid #ccc; width: 100%;
-                    ">
-                    <tr style="background-color: #eee;">
+
+                <!-- MATERIAL SPEC -->
+                <div style="padding:5px;">
+                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">MATERIAL SPECIFICATIONS</p>
+                  <table class="dataTable" style="width:100%; border:1px solid #ccc;">
+                    <tr>
                       <td class="dataCell">Mountings</td>
-                      <td class="dataCell">Aluminum +
-                        Stainless Steel +
-                        Tempered Glass
-                      </td>
+                      <td class="dataCell">Aluminum + Stainless Steel + Tempered Glass</td>
                     </tr>
                     <tr>
                       <td class="dataCell">Reflector Material</td>
                       <td class="dataCell">Aluminum</td>
                     </tr>
-                    <tr style="background-color: #eee;">
+                    <tr>
                       <td class="dataCell">Lens Material</td>
                       <td class="dataCell">PMMA</td>
                     </tr>
@@ -394,7 +318,7 @@
                       <td class="dataCell">Ingress Protection</td>
                       <td class="dataCell">IP65</td>
                     </tr>
-                    <tr style="background-color: #eee;">
+                    <tr>
                       <td class="dataCell">Impact Protection</td>
                       <td class="dataCell">IK03</td>
                     </tr>
@@ -402,72 +326,50 @@
                       <td class="dataCell">Body Finish</td>
                       <td class="dataCell">Matt White</td>
                     </tr>
-                    <tr style="background-color: #eee;">
+                    <tr>
                       <td class="dataCell">Reflector Finish</td>
                       <td class="dataCell">Matt Black</td>
                     </tr>
-
                   </table>
                 </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div style="padding: 0px 35px; border-collapse: collapse; 
-      border-spacing: 0px; ">
-        <table style="table-layout: fixed;border-collapse: collapse;width: 100%; 
-          border: 1px solid #ccc; border-top:0px solid;
-          border-spacing: 0px;
-          padding: 0px 35px; box-sizing: border-box;">
-          <tr>
-            <td style="
-            border-spacing: 0px; 
-            padding: 0px;
-            width: 380px;
-            place-content: start;
-            border-collapse: collapse;
-            border-right: 1px solid#ccc;">
-              <div style="place-content: start;">
 
-                <div style="
-              padding: 5px; border-bottom: 1px solid #ccc;">
+              </td>
+            </tr>
 
-                  <div style="font-size: 11px; padding: 0px;
-                  color: #1f1f1f;
-                  line-height: 13px; margin: 0px; width: 100%;">
-                    Note : For additional accessories, control options, special color finishes and extended warranty
-                    please write to us at info@rewire-intl.com.
-                    For more information, visit our website: www.jupiter-lighting.com
-                  </div>
+            <!-- NOTE ROW -->
+            <tr>
+              <td colspan="2" style="border-top:1px solid #ccc; padding:5px;">
+                <div style="font-size:11px; line-height:13px;">
+                  Note: For additional accessories, control options, special color finishes and extended warranty please
+                  write to us at info@rewire-intl.com. For more information, visit our website: www.jupiter-lighting.com
                 </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
+              </td>
+            </tr>
+          </table>
 
-      <div style="height: 17.5px; "></div>
-      <div style="padding: 0px 35px; margin: auto; background-color: #eee;">
-        <table style="height: 30px; 
-      width: 100%; border-collapse: collapse;  padding: 35px 35px;">
-          <tr>
-            <td
-              style="width: 90px; align-items: center; justify-items: center; place-content: center; place-items: center;">
-              <img style="width: 80px; object-fit: contain" src="/images/jupiter-logo.svg" alt="">
-            </td>
-            <td style="font-size: 9px; text-align: start; color: #1f1f1f;">© 2025 Jupiter Lighting. All rights reserved.
-              We reserve the
-              right to make
-              technical changes without prior
-              notice.</td>
-            <td style="font-size: 12px;font-weight: 600; text-align: end; color: #0069AF;">JUPITER-LIGHTING.COM</td>
-          </tr>
-        </table>
-      </div>
-      <div style="height: 17.5px; "></div>
+          <!-- FOOTER -->
+          <div style="height:17px;"></div>
 
-    </div> <!-- End of datasheet -->
+          <div style="background-color: #eee; padding: 0px 35px; margin: auto;">
+            <table style="width: 100%; margin:auto;  height:30px;">
+              <tr>
+                <td style="width:90px;">
+                  <img src="/images/jupiter-logo.svg" style="width:80px; object-fit:contain;" />
+                </td>
+                <td style="font-size:9px; color:#1f1f1f;">© 2025 Jupiter Lighting. All rights reserved. We reserve the
+                  right to make technical changes without prior notice.</td>
+                <td style="font-size:12px; font-weight:600; text-align:right; color:#0069AF;">JUPITER-LIGHTING.COM</td>
+              </tr>
+            </table>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
 </body>
 
 </html>
+<!-- Your optimized full-bleed A4 HTML will be inserted here. Please paste your current full code so I can replace it cleanly. -->
