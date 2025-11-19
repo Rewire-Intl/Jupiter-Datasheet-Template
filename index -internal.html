@@ -64,8 +64,8 @@
       align-items: center;
       background: #eee;
       font-family: "Dubai", sans-serif;
-      min-width: 794px;
-      min-height: 1122px;
+      min-width: 210mm;
+      min-height: 297mm;
       /* light grey background so white A4 stands out */
     }
 
@@ -90,26 +90,29 @@
     /* Print Settings */
     @page {
       size: A4;
-      margin: 0;
+      margin: 0 !important;
+      padding: 0 !important;
 
     }
 
+    @media print {
+      body {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
 
-    .header {
-      width: 680px;
-      /* 180mm */
-      margin: 34px auto;
-      /* 9mm */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      .page {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
     }
   </style>
 </head>
 
 <body>
-
-  <div style="background-color: white; width: 210mm; height: 297mm; padding: 17.5px 0px;">
+  <div style="background-color: white; width: 210mm; min-height: 297mm; height: auto; padding: 17.5px 0px;">
     <!-- Header -->
     <div>
 
@@ -215,7 +218,7 @@
       </table>
       <!-- Product Section -->
       <div style="padding: 0px 35px; border-collapse: collapse; 
-      border-spacing: 0px; height: 630px;  ">
+      border-spacing: 0px;   ">
         <table style="border-collapse: collapse;width: 100%; 
           border: 1px solid #ccc; border-top:0px solid;
           border-spacing: 0px;
