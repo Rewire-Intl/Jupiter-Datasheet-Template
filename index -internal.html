@@ -1,39 +1,40 @@
-<!-- Clean A4 One-Page HTML (No Margins, Table-Only Layout) -->
+<!-- Clean A4 One-Page HTML (No Margins, Table-Only Layout, all px → mm) -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <title>Jupiter Datasheet</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <style>
     @font-face {
-      font-family: "Dubai";
+      font-family: "Dubai-Light";
       src: url("fonts/Dubai-Light.woff") format("woff");
-      font-weight: 300;
+      font-weight: normal;
     }
 
     @font-face {
-      font-family: "Dubai";
+      font-family: "Dubai-Regular";
       src: url("fonts/Dubai-Regular.woff") format("woff");
-      font-weight: 400;
+      font-weight: normal;
     }
 
     @font-face {
-      font-family: "Dubai";
+      font-family: "Dubai-Medium";
       src: url("fonts/Dubai-Medium.woff") format("woff");
-      font-weight: 600;
+      font-weight: normal;
     }
 
     @font-face {
-      font-family: "Dubai";
+      font-family: "Dubai-Bold";
       src: url("fonts/Dubai-Bold.woff") format("woff");
-      font-weight: 900;
+      font-weight: normal;
     }
 
     @font-face {
       font-family: "Geist Mono";
       src: url("fonts/GeistMono-Regular.ttf") format("truetype");
-      font-weight: 500;
+      font-weight: 5normal0;
     }
 
     @page {
@@ -46,6 +47,9 @@
       margin: 0;
       padding: 0;
       font-family: "Dubai";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-display: swap;
     }
 
     body {
@@ -67,15 +71,13 @@
     }
 
     .icon {
-      border: 1px solid #ccc;
-      width: 24px;
-      height: 24px;
-      margin-bottom: 5px;
+      border: 0.25mm solid #ccc;
+      width: 6.3mm;
+      height: 6.3mm;
+      margin-bottom: 1.3mm;
       background: #fff;
-      margin-bottom: 5px;
       object-fit: cover;
     }
-
 
     td {
       padding: 0;
@@ -87,16 +89,55 @@
 
     .dataTable tr:nth-child(even) {
       background-color: #f2f2f2;
-      /* Light gray for even rows */
     }
 
-
-
     .dataCell {
-      border: 1px solid #ccc;
-      font-size: 12px;
-      padding: 4px 5px;
-      line-height: 13px;
+      border: 0.25mm solid #ccc;
+      font-size: 3mm;
+      padding: 1mm 1.25mm;
+      line-height: 3.25mm;
+      vertical-align: middle;
+    }
+
+    .header-left {
+      font-size: 4.75mm;
+      font-weight: 700;
+      padding-left: 9.25mm;
+      color: #eee;
+      font-family: "Dubai-Bold";
+    }
+
+    .header-left span {
+      font-weight: 300;
+      font-family: "Dubai-Light";
+    }
+
+    .header-right {
+      font-size: 4.75mm;
+      font-weight: 300;
+      text-align: right;
+      padding-right: 9.25mm;
+      color: #eee;
+      font-family: "Dubai-Light";
+    }
+
+    .spacer {
+      height: 4.5mm;
+    }
+
+    .footer-logo {
+      width: 21mm;
+    }
+
+    .footer-padding {
+      padding: 0 9.25mm;
+    }
+
+    .heading {
+      font-family: "Dubai-Medium";
+      font-size: 3.3mm;
+      color: #0069AF;
+      margin: 0
     }
   </style>
 </head>
@@ -105,39 +146,36 @@
 
   <div class="a4-page">
 
-    <!-- FULL PAGE TABLE STRUCTURE -->
     <table style="width:100%; height:100%; border-collapse:collapse;">
       <tr>
         <td>
 
+          <div class="spacer"></div>
+
           <!-- HEADER -->
-          <table style="width:100%; height:30px; background:#0069AF;">
+          <table style="width:100%; height:8mm; background:#0069AF;">
             <tr>
-              <td style="color:#eee; font-size:18px; font-weight:700; padding-left:35px;">ENGIX PRO <span
-                  style="font-weight:300;">Series</span></td>
-              <td style="color:#eee; font-size:18px; font-weight:300; text-align:right; padding-right:30px;">ROUND TRIM
-                CONE ADJUSTABLE</td>
+              <td class="header-left">ENGIX PRO <span>Series</span></td>
+              <td class="header-right">ROUND TRIM CONE ADJUSTABLE</td>
             </tr>
           </table>
 
-          <!-- SPACER -->
-          <div style="height:17px;"></div>
+          <div class="spacer"></div>
 
           <!-- PRODUCT IMAGE + DESCRIPTION TABLE -->
-          <table style="width: calc(100% - 70px); margin: auto; border:1px solid #ccc; height:280px;">
+          <table style="width: calc(100% - 18.5mm); margin:auto; border:0.25mm solid #ccc; height:63mm;">
             <tr>
-
               <!-- LEFT COL: IMAGE + ICONS -->
-              <td style="width:380px; border-right:1px solid #ccc;">
+              <td style="width:100mm; border-right:0.25mm solid #ccc;">
                 <table style="width:100%; height:100%;">
                   <tr>
-                    <td style="width:100%; height:100%;">
+                    <td style="width:100%; height:100%; text-align:center;">
                       <img src="/images/product_images/downlight.jpg"
-                        style="width:100%; height:100%; object-fit:contain;" />
+                        style="height: 63mm; width: 100%; object-fit: contain;" />
                     </td>
-                    <td style="width:35px; border-left:1px solid #ccc; padding:5px; place-content: start;">
-                      <div style="font-size:0; place-content: start;">
-                        <img src="images/icons/CE.png" class="icon" />
+                    <td style="width:9mm; border-left:0.25mm solid #ccc; padding:1.3mm;">
+                      <div style="font-size:0;">
+                        <img src="images/icons/CB.png" class="icon" />
                         <img src="images/icons/CE.png" class="icon" />
                         <img src="images/icons/CEILING-ADJUTABLE.png" class="icon" />
                         <img src="images/icons/CLASS-III.png" class="icon" />
@@ -154,9 +192,9 @@
               </td>
 
               <!-- RIGHT COL: DESCRIPTION -->
-              <td style="padding:5px; vertical-align:top;">
-                <p style="font-size:14px; font-weight:600; color:#0069AF; margin:0;">PRODUCT DESCRIPTION</p>
-                <p style="font-size:12px; font-weight:300; line-height:16px; margin:0;">
+              <td style="padding:1.3mm; vertical-align:top;">
+                <p class="heading">PRODUCT DESCRIPTION</p>
+                <p style="font-size:3.25mm; font-weight:300; line-height:4mm; margin:0;">
                   The ENGIX Round Cone Trim Adjustable Downlight family is a premium range of architectural luminaires
                   designed for precise, high-quality illumination. With wattages from 6W to 41W and outputs up to 3700
                   lumens, the series delivers exceptional flexibility across commercial, retail, and residential
@@ -170,75 +208,70 @@
                   installation versatility—making them ideal for both ambient and accent lighting solutions.
                 </p>
               </td>
-
             </tr>
           </table>
 
           <!-- TECH SECTION MAIN SPLIT -->
           <table
-            style="width: calc(100% - 70px); margin: auto; border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #ccc;">
+            style="height: calc(100% - 121mm); width: calc(100% - 18.5mm); margin: auto; border-left:0.25mm solid #ccc; border-right:0.25mm solid #ccc; border-bottom:0.25mm solid #ccc;">
             <tr>
-
               <!-- LEFT SIDE: DIAGRAM + ACCESSORIES -->
-              <td style="width:380px; border-right:1px solid #ccc; vertical-align:top;">
-
-                <div style="text-align:center; padding-top:10px;">
-                  <img src="/images/diagrams/Diagram-01.png" style="height:180px; object-fit:contain;" />
+              <td style="width:100mm; border-right:0.25mm solid #ccc; vertical-align:top;">
+                <div style="text-align:center; padding-top:2.5mm;">
+                  <img src="/images/diagrams/Diagram-01.png" style="height:45mm; object-fit:contain;" />
                 </div>
 
-                <div style="padding:5px; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
-                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">PHOTOMETRIC DIAGRAM</p>
+                <div style="padding:1.3mm; border-top:0.25mm solid #ccc; border-bottom:0.25mm solid #ccc;">
+                  <p class="heading">PHOTOMETRIC DIAGRAM</p>
                   <img src="/images/photometric/photometric-01.png"
-                    style="width:100%; height:150px; object-fit:contain;" />
+                    style="width:100%; height:37.5mm; object-fit:contain;" />
                 </div>
 
                 <!-- ACCESSORIES -->
-                <div style="padding:5px;">
-                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">ACCESSORIES</p>
-                  <table style="">
+                <div style="padding:1.3mm;">
+                  <p class="heading">ACCESSORIES</p>
+                  <table>
                     <tr>
-                      <td style="width:70px;padding-right: 5px;">
+                      <td style="width:18.5mm; padding-right:1.3mm;">
                         <img src="/images/accessories/Accessories-01.png"
-                          style="width:70px; height:70px; line-height: 0px;vertical-align: top; border:1px solid #ccc; object-fit:contain;" />
-                        <p style="font-size:10px; margin:4px 0; line-height:10px;">Non Dimmable LED Driver
-                        </p>
-                        <p style="font-size:9px; background:#eee; width:fit-content; padding:4px; margin:4px 0;">850001
+                          style="width:18.5mm; height:18.5mm; border:0.25mm solid #ccc; object-fit:contain;" />
+                        <p style="font-size:2.6mm; margin:1mm 0; line-height:2.6mm;">Non Dimmable LED Driver</p>
+                        <p style="font-size:2.3mm; background:#eee; width:fit-content; padding:1mm; margin:1mm 0;">
+                          850001
                         </p>
                       </td>
-                      <td style="width:70px;padding-right: 5px;">
+                      <td style="width:18.5mm; padding-right:1.3mm;">
                         <img src="/images/accessories/Accessories-02.png"
-                          style="width:70px; height:70px; border:1px solid #ccc;vertical-align: top; object-fit:contain;" />
-                        <p style="font-size:10px; margin:4px 0; line-height:10px;width: 100%;">Non Dimmable LED Driver
-                        </p>
-                        <p style="font-size:9px; background:#eee; width:fit-content; padding:4px; margin:4px 0;">850001
+                          style="width:18.5mm; height:18.5mm; border:0.25mm solid #ccc; object-fit:contain;" />
+                        <p style="font-size:2.6mm; margin:1mm 0; line-height:2.6mm;">Non Dimmable LED Driver</p>
+                        <p style="font-size:2.3mm; background:#eee; width:fit-content; padding:1mm; margin:1mm 0;">
+                          850001
                         </p>
                       </td>
-                      <td style="width:70px;padding-right: 5px;">
+                      <td style="width:18.5mm; padding-right:1.3mm;">
                         <img src="/images/accessories/Accessories-03.png"
-                          style="width:70px; height:70px; border:1px solid #ccc; object-fit:contain;vertical-align: top;" />
-                        <p style="font-size:10px; margin:4px 0; line-height:10px;width: 100%;">Non Dimmable LED Driver
-                        </p>
-                        <p style="font-size:9px; background:#eee; width:fit-content; padding:4px; margin:4px 0;">850001
+                          style="width:18.5mm; height:18.5mm; border:0.25mm solid #ccc; object-fit:contain;" />
+                        <p style="font-size:2.6mm; margin:1mm 0; line-height:2.6mm;">Non Dimmable LED Driver</p>
+                        <p style="font-size:2.3mm; background:#eee; width:fit-content; padding:1mm; margin:1mm 0;">
+                          850001
                         </p>
                       </td>
                     </tr>
                   </table>
                 </div>
-
               </td>
 
               <!-- RIGHT SIDE: ITEM CODE + TECH + MATERIAL -->
               <td style="vertical-align:top;">
-
-                <div style="background:#eee; padding:5px; border-bottom:1px solid #ccc;">
-                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">ITEM CODE</p>
-                  <div style="font-size:18px; font-family:monospace;">DPA10099270406601</div>
+                <div style="background:#eee; padding:1.3mm; border-bottom:0.25mm solid #ccc;">
+                  <p class="heading">ITEM CODE</p>
+                  <div style="font-size:4mm; font-family:monospace;">DPA10099270406601</div>
                 </div>
 
                 <!-- TECHNICAL SPEC -->
-                <div style="padding:5px; border-bottom:1px solid #ccc;">
-                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">TECHNICAL SPECIFICATIONS</p>
-                  <table class="dataTable" style="width:100%; border:1px solid #ccc;">
+                <div style="padding:1.3mm; border-bottom:0.25mm solid #ccc;">
+                  <p class="heading">TECHNICAL SPECIFICATIONS</p>
+                  <table class="dataTable" style="width:100%; border:0.25mm solid #ccc;">
                     <tr>
                       <td class="dataCell">Light Source</td>
                       <td class="dataCell">CITIZEN LED</td>
@@ -299,9 +332,9 @@
                 </div>
 
                 <!-- MATERIAL SPEC -->
-                <div style="padding:5px;">
-                  <p style="font-size:14px; font-weight:600; margin:0; color:#0069AF;">MATERIAL SPECIFICATIONS</p>
-                  <table class="dataTable" style="width:100%; border:1px solid #ccc;">
+                <div style="padding:1.3mm;">
+                  <p class="heading">MATERIAL SPECIFICATIONS</p>
+                  <table class="dataTable" style="width:100%; border:0.25mm solid #ccc;">
                     <tr>
                       <td class="dataCell">Mountings</td>
                       <td class="dataCell">Aluminum + Stainless Steel + Tempered Glass</td>
@@ -338,8 +371,8 @@
 
             <!-- NOTE ROW -->
             <tr>
-              <td colspan="2" style="border-top:1px solid #ccc; padding:5px;">
-                <div style="font-size:11px; line-height:13px;">
+              <td colspan="2" style="font-weight: 300; border-top:0.25mm solid #ccc; padding:1.3mm;">
+                <div style="font-size:2.6mm; line-height:3mm;">
                   Note: For additional accessories, control options, special color finishes and extended warranty please
                   write to us at info@rewire-intl.com. For more information, visit our website: www.jupiter-lighting.com
                 </div>
@@ -348,20 +381,24 @@
           </table>
 
           <!-- FOOTER -->
-          <div style="height:17px;"></div>
+          <div class="spacer"></div>
 
-          <div style="background-color: #eee; padding: 0px 35px; margin: auto;">
-            <table style="width: 100%; margin:auto;  height:30px;">
+          <div style="background-color: #eee;" class="footer-padding">
+            <table style="width: 100%; margin:auto; height:8mm;">
               <tr>
-                <td style="width:90px;">
-                  <img src="/images/jupiter-logo.svg" style="width:80px; object-fit:contain;" />
+                <td style="width:23.5mm;">
+                  <img src="/images/jupiter-logo.svg" style="width:21mm; object-fit:contain;" />
                 </td>
-                <td style="font-size:9px; color:#1f1f1f;">© 2025 Jupiter Lighting. All rights reserved. We reserve the
+                <td style="font-size:2.35mm; color:#808080;">© 2025 Jupiter Lighting. All rights reserved. We reserve
+                  the
                   right to make technical changes without prior notice.</td>
-                <td style="font-size:12px; font-weight:600; text-align:right; color:#0069AF;">JUPITER-LIGHTING.COM</td>
+                <td style="font-size:3.15mm; font-weight:600; text-align:right; color:#0069AF;">JUPITER-LIGHTING.COM
+                </td>
               </tr>
             </table>
           </div>
+
+          <div class="spacer"></div>
 
         </td>
       </tr>
@@ -372,4 +409,3 @@
 </body>
 
 </html>
-<!-- Your optimized full-bleed A4 HTML will be inserted here. Please paste your current full code so I can replace it cleanly. -->
