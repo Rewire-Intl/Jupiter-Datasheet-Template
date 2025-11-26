@@ -1,4 +1,3 @@
-<!-- Clean A4 One-Page HTML (No Margins, Table-Only Layout, all px → mm) -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +45,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: "Dubai";
+      font-family: "Dubai-Regular";
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       font-display: swap;
@@ -103,12 +102,29 @@
       font-size: 4.75mm;
       font-weight: 700;
       padding-left: 9.25mm;
+      line-height: 4mm;
       color: #eee;
+      line-height: 4mm;
       font-family: "Dubai-Bold";
+    }
+
+    .description {
+      display: -webkit-box;
+      -webkit-line-clamp: 18;
+      line-clamp: 18;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 3.25mm;
+      font-weight: 300;
+      line-height: 4mm;
+      margin: 0;
+      font-family: "Dubai-Light";
     }
 
     .header-left span {
       font-weight: 300;
+      line-height: 1mm;
+      line-height: 4mm;
       font-family: "Dubai-Light";
     }
 
@@ -155,7 +171,13 @@
           <!-- HEADER -->
           <table style="width:100%; height:8mm; background:#0069AF;">
             <tr>
-              <td class="header-left">ENGIX PRO <span>Series</span></td>
+
+              <td class="header-left">
+                <!--Series Name-->
+                ENGIX PRO
+                <span>Series</span>
+              </td>
+              <!--Family Name-->
               <td class="header-right">ROUND TRIM CONE ADJUSTABLE</td>
             </tr>
           </table>
@@ -163,18 +185,20 @@
           <div class="spacer"></div>
 
           <!-- PRODUCT IMAGE + DESCRIPTION TABLE -->
-          <table style="width: calc(100% - 18.5mm); margin:auto; border:0.25mm solid #ccc; height:63mm;">
+          <table style="width: calc(100% - 18.5mm); margin:auto; border:0.25mm solid #ccc; height:63mm; ">
             <tr>
               <!-- LEFT COL: IMAGE + ICONS -->
               <td style="width:100mm; border-right:0.25mm solid #ccc;">
                 <table style="width:100%; height:100%;">
                   <tr>
                     <td style="width:100%; height:100%; text-align:center;">
-                      <img src="/images/product_images/downlight.jpg"
+                      <!--Main Image-->
+                      <img src="images/product_images/downlight.jpg" alt=""
                         style="height: 63mm; width: 100%; object-fit: contain;" />
                     </td>
-                    <td style="width:9mm; border-left:0.25mm solid #ccc; padding:1.3mm;">
+                    <td style="width:9mm; border-left:0.25mm solid #ccc; padding:1.3mm; place-content: start;">
                       <div style="font-size:0;">
+                        <!--Icon Images-->
                         <img src="images/icons/CB.png" class="icon" />
                         <img src="images/icons/CE.png" class="icon" />
                         <img src="images/icons/CEILING-ADJUTABLE.png" class="icon" />
@@ -192,9 +216,10 @@
               </td>
 
               <!-- RIGHT COL: DESCRIPTION -->
-              <td style="padding:1.3mm; vertical-align:top;">
+              <td style="padding:1.3mm; vertical-align:top; ">
                 <p class="heading">PRODUCT DESCRIPTION</p>
-                <p style="font-size:3.25mm; font-weight:300; line-height:4mm; margin:0;">
+                <!--Product Description-->
+                <p class="description">
                   The ENGIX Round Cone Trim Adjustable Downlight family is a premium range of architectural luminaires
                   designed for precise, high-quality illumination. With wattages from 6W to 41W and outputs up to 3700
                   lumens, the series delivers exceptional flexibility across commercial, retail, and residential
@@ -206,6 +231,14 @@
                   compatibility for seamless integration with modern lighting control systems. Rated IP20 or IP65
                   depending on the model, the ENGIX RD downlights combine refined aesthetics, superior performance, and
                   installation versatility—making them ideal for both ambient and accent lighting solutions.
+
+                  Available in white or black finishes, these fixtures feature ON/OFF, 0–10V, and DALI dimming
+                  compatibility for seamless integration with modern lighting control systems. Rated IP20 or IP65
+                  depending on the model, the ENGIX RD downlights combine refined aesthetics, superior performance, and
+                  installation versatility—making them ideal for both ambient and accent lighting solutions.
+
+                  background-color: #808080;asd
+                  asdasdasd
                 </p>
               </td>
             </tr>
@@ -213,17 +246,19 @@
 
           <!-- TECH SECTION MAIN SPLIT -->
           <table
-            style="height: calc(100% - 121mm); width: calc(100% - 18.5mm); margin: auto; border-left:0.25mm solid #ccc; border-right:0.25mm solid #ccc; border-bottom:0.25mm solid #ccc;">
+            style="height: calc(100% - 120mm); width: calc(100% - 18.5mm); margin: auto; border-left:0.25mm solid #ccc; border-right:0.25mm solid #ccc; border-bottom:0.25mm solid #ccc;">
             <tr>
               <!-- LEFT SIDE: DIAGRAM + ACCESSORIES -->
               <td style="width:100mm; border-right:0.25mm solid #ccc; vertical-align:top;">
                 <div style="text-align:center; padding-top:2.5mm;">
-                  <img src="/images/diagrams/Diagram-01.png" style="height:45mm; object-fit:contain;" />
+                  <!--Diagram Image-->
+                  <img src="images/diagrams/Diagram-01.png" style="height:45mm; width: 100%; object-fit:contain;" />
                 </div>
 
                 <div style="padding:1.3mm; border-top:0.25mm solid #ccc; border-bottom:0.25mm solid #ccc;">
                   <p class="heading">PHOTOMETRIC DIAGRAM</p>
-                  <img src="/images/photometric/photometric-01.png"
+                  <!--Photometry Image-->
+                  <img src="images/photometric/photometric-01.png" alt=""
                     style="width:100%; height:37.5mm; object-fit:contain;" />
                 </div>
 
@@ -232,24 +267,27 @@
                   <p class="heading">ACCESSORIES</p>
                   <table>
                     <tr>
+                      <!--Accessory A-->
                       <td style="width:18.5mm; padding-right:1.3mm;">
-                        <img src="/images/accessories/Accessories-01.png"
+                        <img src="images/accessories/Accessories-01.png"
                           style="width:18.5mm; height:18.5mm; border:0.25mm solid #ccc; object-fit:contain;" />
                         <p style="font-size:2.6mm; margin:1mm 0; line-height:2.6mm;">Non Dimmable LED Driver</p>
                         <p style="font-size:2.3mm; background:#eee; width:fit-content; padding:1mm; margin:1mm 0;">
                           850001
                         </p>
                       </td>
+                      <!--Accessory B-->
                       <td style="width:18.5mm; padding-right:1.3mm;">
-                        <img src="/images/accessories/Accessories-02.png"
+                        <img src="images/accessories/Accessories-02.png"
                           style="width:18.5mm; height:18.5mm; border:0.25mm solid #ccc; object-fit:contain;" />
                         <p style="font-size:2.6mm; margin:1mm 0; line-height:2.6mm;">Non Dimmable LED Driver</p>
                         <p style="font-size:2.3mm; background:#eee; width:fit-content; padding:1mm; margin:1mm 0;">
                           850001
                         </p>
                       </td>
+                      <!--Accessory C-->
                       <td style="width:18.5mm; padding-right:1.3mm;">
-                        <img src="/images/accessories/Accessories-03.png"
+                        <img src="images/accessories/Accessories-03.png"
                           style="width:18.5mm; height:18.5mm; border:0.25mm solid #ccc; object-fit:contain;" />
                         <p style="font-size:2.6mm; margin:1mm 0; line-height:2.6mm;">Non Dimmable LED Driver</p>
                         <p style="font-size:2.3mm; background:#eee; width:fit-content; padding:1mm; margin:1mm 0;">
@@ -264,6 +302,7 @@
               <!-- RIGHT SIDE: ITEM CODE + TECH + MATERIAL -->
               <td style="vertical-align:top;">
                 <div style="background:#eee; padding:1.3mm; border-bottom:0.25mm solid #ccc;">
+                  <!--Item Code-->
                   <p class="heading">ITEM CODE</p>
                   <div style="font-size:4mm; font-family:monospace;">DPA10099270406601</div>
                 </div>
@@ -336,8 +375,12 @@
                   <p class="heading">MATERIAL SPECIFICATIONS</p>
                   <table class="dataTable" style="width:100%; border:0.25mm solid #ccc;">
                     <tr>
-                      <td class="dataCell">Mountings</td>
-                      <td class="dataCell">Aluminum + Stainless Steel + Tempered Glass</td>
+                      <td class="dataCell">Mounting</td>
+                      <td class="dataCell">Ceiling Reccessed</td>
+                    </tr>
+                    <tr>
+                      <td class="dataCell">Housing Material</td>
+                      <td class="dataCell">Aluminum</td>
                     </tr>
                     <tr>
                       <td class="dataCell">Reflector Material</td>
@@ -372,7 +415,7 @@
             <!-- NOTE ROW -->
             <tr>
               <td colspan="2" style="font-weight: 300; border-top:0.25mm solid #ccc; padding:1.3mm;">
-                <div style="font-size:2.6mm; line-height:3mm;">
+                <div style="font-size:2.6mm; line-height:3mm; font-family: Dubai-Light;">
                   Note: For additional accessories, control options, special color finishes and extended warranty please
                   write to us at info@rewire-intl.com. For more information, visit our website: www.jupiter-lighting.com
                 </div>
@@ -387,7 +430,7 @@
             <table style="width: 100%; margin:auto; height:8mm;">
               <tr>
                 <td style="width:23.5mm;">
-                  <img src="/images/jupiter-logo.svg" style="width:21mm; object-fit:contain;" />
+                  <img src="images/jupiter-logo.svg" style="width:21mm; object-fit:contain;" />
                 </td>
                 <td style="font-size:2.35mm; color:#808080;">© 2025 Jupiter Lighting. All rights reserved. We reserve
                   the
